@@ -1,4 +1,4 @@
-# ERP Frontend
+ ERP Frontend
 
 [![Angular](https://img.shields.io/badge/Angular-21-red)](https://angular.io/)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
@@ -8,7 +8,7 @@ Cette application Angular communique avec le backend ERP pour fournir une interf
 
 ---
 
-## 🚀 Objectif du projet
+ 🚀 Objectif du projet
 
 L’objectif de ce frontend est de fournir une interface intuitive pour :  
 - Créer, modifier et suivre les projets et tâches  
@@ -18,7 +18,7 @@ L’objectif de ce frontend est de fournir une interface intuitive pour :
 
 ---
 
-## ⚙️ Technologies
+ ⚙️ Technologies
 
 - Angular 21  
 - TypeScript  
@@ -29,8 +29,7 @@ L’objectif de ce frontend est de fournir une interface intuitive pour :
 
 ---
 
-## 📁 Structure du projet
-
+ 📁 Structure du projet
 src/
 ├─ app/
 │ ├─ components/ # Composants UI (login, dashboard, projet, tâche)
@@ -42,12 +41,9 @@ src/
 ├─ assets/ # Images, icônes, etc.
 ├─ styles.css # Styles globaux
 
-yaml
-Copier le code
-
 ---
 
-## ⚡ Installation
+⚡ Installation
 
 1. Cloner le projet
 
@@ -56,26 +52,25 @@ git clone https://github.com/jihenrabouch/erp-frontend.git
 cd erp-frontend
 Installer les dépendances
 
-bash
-Copier le code
 npm install
+
 🏃 Lancer l’application
-bash
-Copier le code
 ng serve
+
+
 L’application sera accessible sur : http://localhost:4200/
 
 L’interface communique avec le backend pour l’authentification et les opérations CRUD.
+Authentification
 
-🔐 Authentification
 Le login est sécurisé via JWT fourni par le backend.
 
 Ajouter le token dans les headers pour les endpoints sécurisés :
 
-http
-Copier le code
 Authorization: Bearer <token>
+
 🧩 Fonctionnalités principales
+
 Gestion des projets : création, modification, assignation d’équipes
 
 Gestion des tâches : Kanban, drag & drop, suivi du temps
@@ -85,6 +80,7 @@ Reporting : statistiques, burn-down charts
 Gestion utilisateurs et rôles : Admin, Chef de projet, Employé, QA, Support
 
 📌 Bonnes pratiques
+
 Ne jamais committer node_modules/ → utiliser .gitignore
 
 Toujours tester localement avec ng serve avant de pousser
@@ -92,7 +88,7 @@ Toujours tester localement avec ng serve avant de pousser
 Utiliser Git pour chaque nouvelle fonctionnalité : branche, commit, merge
 
 🔗 Liens utiles
+
 Documentation Angular
 
 Backend ERP sur GitHub
-

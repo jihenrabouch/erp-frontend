@@ -1,59 +1,98 @@
-# ErpFrontendNew
+# ERP Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
+[![Angular](https://img.shields.io/badge/Angular-21-red)](https://angular.io/)
+[![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
 
-## Development server
+Frontend de l’ERP pour gérer **projets, tâches et équipes**.  
+Cette application Angular communique avec le backend ERP pour fournir une interface utilisateur riche et interactive.
 
-To start a local development server, run:
+---
+
+## 🚀 Objectif du projet
+
+L’objectif de ce frontend est de fournir une interface intuitive pour :  
+- Créer, modifier et suivre les projets et tâches  
+- Gérer les équipes et assigner les membres aux tâches  
+- Suivre le temps passé sur chaque tâche et projet  
+- Visualiser les statistiques et rapports via des dashboards  
+
+---
+
+## ⚙️ Technologies
+
+- Angular 21  
+- TypeScript  
+- RxJS  
+- HTML5 & CSS3  
+- Bootstrap ou CSS natif pour le style  
+- Communication avec le backend via HTTP (REST API)  
+
+---
+
+## 📁 Structure du projet
+
+src/
+├─ app/
+│ ├─ components/ # Composants UI (login, dashboard, projet, tâche)
+│ ├─ services/ # Services Angular pour API
+│ ├─ guards/ # Guards pour la sécurité des routes
+│ ├─ interceptors/ # Intercepteurs HTTP pour JWT
+│ ├─ app.routes.ts # Gestion des routes
+│ ├─ app.config.ts # Configuration globale
+├─ assets/ # Images, icônes, etc.
+├─ styles.css # Styles globaux
+
+yaml
+Copier le code
+
+---
+
+## ⚡ Installation
+
+1. Cloner le projet
 
 ```bash
+git clone https://github.com/jihenrabouch/erp-frontend.git
+cd erp-frontend
+Installer les dépendances
+
+bash
+Copier le code
+npm install
+🏃 Lancer l’application
+bash
+Copier le code
 ng serve
-```
+L’application sera accessible sur : http://localhost:4200/
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+L’interface communique avec le backend pour l’authentification et les opérations CRUD.
 
-## Code scaffolding
+🔐 Authentification
+Le login est sécurisé via JWT fourni par le backend.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Ajouter le token dans les headers pour les endpoints sécurisés :
 
-```bash
-ng generate component component-name
-```
+http
+Copier le code
+Authorization: Bearer <token>
+🧩 Fonctionnalités principales
+Gestion des projets : création, modification, assignation d’équipes
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Gestion des tâches : Kanban, drag & drop, suivi du temps
 
-```bash
-ng generate --help
-```
+Reporting : statistiques, burn-down charts
 
-## Building
+Gestion utilisateurs et rôles : Admin, Chef de projet, Employé, QA, Support
 
-To build the project run:
+📌 Bonnes pratiques
+Ne jamais committer node_modules/ → utiliser .gitignore
 
-```bash
-ng build
-```
+Toujours tester localement avec ng serve avant de pousser
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Utiliser Git pour chaque nouvelle fonctionnalité : branche, commit, merge
 
-## Running unit tests
+🔗 Liens utiles
+Documentation Angular
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Backend ERP sur GitHub
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
